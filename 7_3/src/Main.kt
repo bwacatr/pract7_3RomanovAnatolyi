@@ -2,10 +2,9 @@ import kotlin.math.sqrt
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-fun main()
-{
+fun main() {
     /*Задание 1 (7)*/
-    /*try {
+    try {
 
 
         println("Введите стороны")
@@ -17,7 +16,7 @@ fun main()
         var p: Double = 0.0
 
         if ((a + b) < c || (c + b) < a || (c + a) < b) {
-            println("Треугольник не существует. Две стороны меньше третьей.")
+            println("Треугольник не существует. сумма двух сторон меньше третьей.")
         } else if (a <= 0 || b <= 0 || c <= 0) {
             println("Треугольник не существует. Длина стороны не может быть меньше или равной нулю.")
         } else {
@@ -26,8 +25,15 @@ fun main()
             S = sqrt(p * (p - a) * (p - b) * (p - c))
             println("Площадь по формуле Герона: $S")
         }
+    }
+    catch (e: NumberFormatException) {
+        println("Неверный тип данных")
+    }
 
-        //Задание 1 (18)
+    //Задание 1 (18)
+
+   /* try
+    {
         println("Введите сторону")
         val a = readln().toDouble()
 
@@ -48,6 +54,8 @@ fun main()
     {
         println("Неверный тип данных")
     }*/
+
+
 
     //Задание 2 (7)
 
@@ -131,7 +139,7 @@ fun main()
     }*/
 
     //Задание 2 (20)
-    val choice = readln()
+    /*val choice = readln()
     try {
         when (choice) {
             "а" -> {
@@ -154,5 +162,5 @@ fun main()
         }
     } catch (e: NumberFormatException) {
         println("Неверное значение")
-    }
+    }*/
 }
