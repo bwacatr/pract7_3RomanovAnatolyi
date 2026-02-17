@@ -4,7 +4,7 @@ import kotlin.math.sqrt
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 fun main() {
     /*Задание 1 (7)*/
-    try {
+   /* try {
 
 
         println("Введите стороны")
@@ -28,7 +28,7 @@ fun main() {
     }
     catch (e: NumberFormatException) {
         println("Неверный тип данных")
-    }
+    }*/
 
     //Задание 1 (18)
 
@@ -139,28 +139,105 @@ fun main() {
     }*/
 
     //Задание 2 (20)
-    /*val choice = readln()
     try {
+        println("Введите функцию (а,б,в,г)")
+    val choice = readln()
+        println("Введите x")
+    val x = readln().toDouble()
+    var y : Double = 0.0
+
         when (choice) {
             "а" -> {
-                println("x = 2, y = 1")
+                if(x < -1)
+                {
+                    println("Данный график не существует")
+                }
+                else if (x >= -1 && x <= 1)
+                {
+                    y = sqrt(1 - x*x)
+                    println(y)
+                }
+                else if (x > 1)
+                {
+                    y = 1 * x + (-1)
+                    println(y)
+                }
+
             }
 
-            "б" -> {
-                println("x = 2, y = 1")
-            }
+            "б" ->
+                {
+                    if(x < - 1)
+                    {
+                        println("Данный график не существует")
+                    }
+                    else if(x >= -1 && x <= 0)
+                        {
+                            y = 1 * x + 1
+                        }
+                    else if (x >= 0 && x <= 3)
+                    {
+                        y = 1.0
+                    }
+                    else if (x >= 3 && x <= 4)
+                    {
+                        y = -1 * x + 4
+                    }
+                    else if(x > 4)
+                    {
+                        println("Данный график не существует")
+                    }
+                }
 
-            "в" -> {
-                println("x = 2, y = 1")
-            }
+            "в" ->
+                {
+                    if(x < - 1)
+                    {
+                        println("Данный график не существует")
+                    }
+                    else if(x >= -1 && x <= 0)
+                    {
+                        y = 1 * x + 1
+                    }
+                    else if (x >= 0 && x <= 1)
+                    {
+                        y = -1 * x + 1
+                    }
+                    else if (x>= 1 && x<=3)
+                    {
+                        y = 0.5 * x + -0.5
+                    }
+                    else if (x >= 3)
+                    {
+                        y = 1.0
+                    }
 
-            "г" -> {
-                println("x = 2, y = 1")
-            }
+                }
+
+            "г" ->
+                {
+                    if(x < -1)
+                    {
+                        println("Данный график не существует")
+                    }
+                    else if (x >= -1 && x <= 0)
+                    {
+                        y = sqrt(1 - x*x)
+                        println(y)
+                    }
+                    else if (x >= 1 && x <= 2)
+                    {
+                        y = 1.0
+                    }
+                    else if (x >= 2)
+                    {
+                        y = 1 * x + -1
+                    }
+                }
 
             else -> println("Такого варианта нет")
         }
     } catch (e: NumberFormatException) {
         println("Неверное значение")
-    }*/
+    }
 }
